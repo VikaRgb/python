@@ -103,3 +103,32 @@ print(best_score)  # Результат: 12
 Очікуваний результат: {'apple': 3, 'banana': 2, 'cherry': 1}
 
 Підказка: Спочатку перетворіть рядок на список слів за допомогою .split(). Потім пройдіть циклом по списку і додавайте слова в словник, збільшуючи лічильник.
+
+/////////////////////////////////////
+def get_students(course_dict):
+    return course_dict["students"]
+
+courses = [
+    {"title": "Python Start", "students": 120},
+    {"title": "JavaScript Expert", "students": 85},
+    {"title": "Design Basics", "students": 140}
+]
+
+# Передаємо назву нашої функції в параметр key
+popular_course = max(courses, key=get_students)
+
+print(f"Найпопулярніший курс: {popular_course['title']}")  /////   def get_students(course_dict):
+    return course_dict["students"]
+
+courses = [
+    {"title": "Python Start", "students": 120},
+    {"title": "JavaScript Expert", "students": 85},
+    {"title": "Design Basics", "students": 140}
+]
+
+# Передаємо назву нашої функції в параметр key
+popular_course = max(courses, key=get_students)
+
+print(f"Найпопулярніший курс: {popular_course['title']}") --- Output  ///////////  Найпопулярніший курс:    Design Basics
+
+///////////////////////
