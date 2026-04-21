@@ -131,4 +131,36 @@ popular_course = max(courses, key=get_students)
 
 print(f"Найпопулярніший курс: {popular_course['title']}") --- Output  ///////////  Найпопулярніший курс:    Design Basics
 
-///////////////////////
+/////////////////////// 
+
+def get_price(item):
+    return item["price"]
+
+products = [
+    {"name": "Огірок", "price": 45},
+    {"name": "Помідор", "price": 80},
+    {"name": "Капуста", "price": 25}
+]
+
+# Шукаємо МІНІМУМ, використовуючи ціну як критерій
+cheapest_item = min(products, key=get_price)
+
+print(f"Найдешевший овоч: {cheapest_item['name']} (ціна: {cheapest_item['price']})")
+# Результат: Капуста 
+
+//////////////////////////////////// 
+
+def get_score(student_dict):
+    return student_dict["score"]
+
+students = [
+    {"name": "Олексій", "score": 88},
+    {"name": "Марина", "score": 95},
+    {"name": "Дмитро", "score": 92}
+]
+
+# Шукаємо МАКСИМУМ за балами
+top_student = max(students, key=get_score)
+
+print(f"Найкращий студент: {top_student['name']}")
+# Результат: Марина
